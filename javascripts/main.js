@@ -26,6 +26,8 @@ $(function() {
   // $('body').append(html);
   $.ajax({
     url: "http://10.10.10.2:80/api/empleados",
+    crossDomain: true,
+    dataType: 'jsonp',
     success: function(box){
       var html = template(box);
       $('body').append(html);
