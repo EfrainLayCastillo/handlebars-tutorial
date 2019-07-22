@@ -1,60 +1,55 @@
-<!doctype html>
-  <head>
-
-  </head>
-  <body>
-
-    <h2>The List of Shoes</h2>
-    <ul class="shoesNav">
-    </ul>
-
-    <h2>The List of Celebrities</h2>
-    <ul class="people">
-    </ul>
-
-    <h2>Grader</h2>
-    <ul class="grader-results">
-    </ul>
-
-    <h2>Student Scores</h2>
-    <ul class="student-score-results">
-
-    </ul>
-
-    <script id="shoe-template" type="text/x-handlebars-template">
-    {{#each allShoes}}
-      <li class="shoes">
-        <span class="shoe-name"> {{ name }} - </span> price: {{ price }}
-        {{> description}}
-      </li>
-    {{/each}}
-    </script>
-
-    <script id="shoe-description" type="text/x-handlebars-template">
-    <ul>
-      <li>{{ color }}</li>
-      <li>{{ size }}</li>
-    </ul>
-    </script>
-
-    <script id="people-list" type="text/x-handlebars-template">
-    {{#users}}
-      <li>{{ name.firstName }} {{ name.lastname }} is in the {{ ../groupName }} group.</li>
-    {{/users}}
-    </script>
-
-    <script id="student" type="text/x-handlebars-template">
-    <li>{{ name }} got a {{ grader score }}.</li>
-    </script>
-
-    <script id="student-scores" type="text/x-handlebars-template">
-    {{#studentScore this}}
-      <li>{{ firstName }} {{ lastName }}, your total score is <b>{{ score }}</b></li>
-    {{/studentScore}}
-    </script>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>FUCK</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+    A
+        <script id="entry-template" type="text/x-handlebars-template">
+            <div class="entry">
+                <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Cedula</th>
+                                <th scope="col">Nombre y Apellido</th>
+                                <th scope="col">Posicion</th>
+                                <th scope="col">Fecha de Ingreso</th>
+                                <th scope="col">salario</th>
+                                <th scope="col">gastos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">8-915-1407</th>
+                                <td>Mark Acevedo</td>
+                                <td>Drogadito</td>
+                                <td>@10/10/01</td>
+                                <td>5000</td>
+                                <td>6000</td>
+                            </tr>
+                            {{#each this}}
+                                <tr>
+                                    <th scope="row">{{cedula}}</th>
+                                    <td>{{nombre}}</td>
+                                    <td>{{posicion}}</td>
+                                    <td>{{fecha_ingreso}}</td>
+                                    <td>{{salario}}</td>
+                                    <td>{{gastos}}</td>
+                                </tr>
+                            {{/each}}
+                        </tbody>
+                    
+                    </table>
+            </div>
+          </script>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
     <script src="javascripts/main.js"></script>
-  </body>
+</body>
 </html>
